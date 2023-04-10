@@ -1,0 +1,15 @@
+{
+    "scripts": {
+            "dbcreate": "php database/scripts/database_create.php",
+            "dbseeder": "php database/seeders/database_seeder.php",
+        "dbmake" : {
+            "dbcreate": "php database/scripts/database_create.php",
+            "dbseeder": "php database/seeders/database_seeder.php"
+        }
+    },
+    "require": {
+        "slim/slim": "4.*",
+        "guzzlehttp/psr7": "^2.4",
+        "respect/validation": "^2.2"
+    }
+}

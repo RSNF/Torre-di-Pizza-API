@@ -1,0 +1,39 @@
+version: '3.8'
+
+volumes:
+  data-postgres:
+    external: false
+
+services:
+
+  php:
+    build: ./PHP-Apache
+    container_name: php-apache-api
+    volumes:
+      - ./PHP-Apache/sites-available:/etc/apache2/sites-available
+      - ./../project:/var/www/html/project
+    ports:
+      - 80:80
+      - 9000:9000
+
+  postgres:
+    build: ./Postgresql
+    container_name: postgresql-api
+    environment:
+      - POSTGRES_USER=${MY_POSTGRES_USER}
+      - POSTGRES_PASSWORD=${MY_POSTGRES_PASSWORD}
+    ports:
+      - 5432:5432
+    volumes:
+      - ./Postgresql/data-postgres:/var/lib/postgresql/data
+
+  pgadmin:
+    build: ./PGAdmin
+    container_name: pgadmin-api
+    depends_on:
+      - postgres
+    ports:
+      - 8081:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${MY_PGADMIN_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${MY_PGADMIN_PASSWORD}
