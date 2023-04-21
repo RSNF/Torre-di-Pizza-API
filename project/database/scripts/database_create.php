@@ -10,12 +10,12 @@ if (pg_query($dbconn, $sql_domains) === FALSE) {
     echo "\nERROR\nError: Create Domains failed :(\n\n";
 }
 
-if (pg_query($dbconn, $sql_schema) === FALSE) {
-    echo "\nERROR\nError: Create Schema failed :(\n\n";
-}
-
 if (pg_query($dbconn, $sql_functions) === FALSE) {
     echo "\nERROR\nError: Create Functions failed :(\n\n";
+}
+
+if (pg_query($dbconn, $sql_schema) === FALSE) {
+    echo "\nERROR\nError: Create Schema failed :(\n\n";
 }
 
 ?>
