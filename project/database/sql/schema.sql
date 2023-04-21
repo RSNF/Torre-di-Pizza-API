@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS pizzaria.cartao_credito (
 
 CREATE TABLE IF NOT EXISTS pizzaria.pedido (
     "id"                SERIAL,
-    "preco_total"       NUMERIC(10, 2)          NOT NULL,
+    "preco_total"       NUMERIC(10, 2)          NOT NULL    DEFAULT 0.00,
     "usuario_id"        INTEGER                 NOT NULL,
     "comentario"        TEXT,
     PRIMARY KEY("id")
@@ -88,3 +88,9 @@ ALTER TABLE pizzaria.pizzas
 ALTER TABLE pizzaria.coberturas_pizza
     ADD CONSTRAINT "fk_cp_pid" FOREIGN KEY("pizza_id") REFERENCES pizzaria.pizzas ("id") ON DELETE CASCADE,
     ADD CONSTRAINT "fk_cp_cid" FOREIGN KEY("cobertura_id") REFERENCES pizzaria.coberturas ("id") ON DELETE CASCADE;
+
+CREATE TRIGGER trigger_preco_sum_bebidas AFTER INSERT ON pizzaria.pedido_tem_bebidas FOR EACH ROW EXECUTE PROCEDURE sum_preco_bebida();
+CREATE TRIGGER trigger_preco_subtract_bebidas AFTER DELETE ON pizzaria.pedido_tem_bebidas FOR EACH ROW EXECUTE PROCEDURE subtract_preco_bebida();
+
+CREATE TRIGGER trigger_preco_sum_pizzas AFTER INSERT ON pizzaria.pedido_tem_pizzas FOR EACH ROW EXECUTE PROCEDURE sum_preco_pizza();
+CREATE TRIGGER trigger_preco_subtract_pizzas AFTER DELETE ON pizzaria.pedido_tem_pizzas FOR EACH ROW EXECUTE PROCEDURE subtract_preco_pizza();
