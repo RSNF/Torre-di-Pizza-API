@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Repositories;
+
 /**
  * Repository Queries
  * @abstract
@@ -7,7 +9,7 @@
 abstract class RepoQueries
 {
     /**
-     * @var PgSql\Connection
+     * @var \PgSql\Connection
      */
     private $dbconn;
 

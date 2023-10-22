@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Repositories\CoberturasRepository;
+
 interface CoberturasInterface
 {
     /**

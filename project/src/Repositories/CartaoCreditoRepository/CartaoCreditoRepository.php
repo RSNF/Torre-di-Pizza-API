@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\CartaoCreditoRepository;
 
-use CartaoCreditoInterface;
-use RepoQueries;
+use App\Repositories\CartaoCreditoRepository\CartaoCreditoInterface;
+use App\Repositories\RepoQueries;
 
 class CartaoCreditoRepository extends RepoQueries implements CartaoCreditoInterface
 {

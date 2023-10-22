@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\CoberturasPizzasRepository;
 
-use CoberturasPizzaInterface;
-use RepoQueries;
+use App\Repositories\CoberturasPizzasRepository\CoberturasPizzaInterface;
+use App\Repositories\RepoQueries;
 
 class CoberturasPizzaRepository extends RepoQueries implements CoberturasPizzaInterface
 {

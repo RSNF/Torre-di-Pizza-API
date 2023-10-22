@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\UsuariosRepository;
 
-use RepoQueries;
-use UsuariosInterface;
+use App\Repositories\RepoQueries;
+use App\Repositories\UsuariosRepository\UsuariosInterface;
 
 class UsuariosRepository extends RepoQueries implements UsuariosInterface
 {

@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Repositories\TamanhosRepository;
+
 interface TamanhosInterface
 {
     /**

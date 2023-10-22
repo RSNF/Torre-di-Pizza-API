@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\PizzasRepository;
 
-use PizzasInterface;
-use RepoQueries;
+use App\Repositories\RepoQueries;
+use App\Repositories\PizzasRepository\PizzasInterface;
 
 class PizzasRepository extends RepoQueries implements PizzasInterface
 {

@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Repositories\PizzasRepository;
+
 interface PizzasInterface
 {
     /**

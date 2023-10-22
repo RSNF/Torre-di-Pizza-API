@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\TamanhosRepository;
 
-use RepoQueries;
-use TamanhosInterface;
+use App\Repositories\RepoQueries;
+use App\Repositories\TamanhosRepository\TamanhosInterface;
 
 class TamanhosRepository extends RepoQueries implements TamanhosInterface
 {

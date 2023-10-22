@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Repositories\UsuariosRepository;
+
 interface UsuariosInterface
 {
     /**

@@ -2,8 +2,6 @@
 
 namespace App\Repositories\BebidaRepository;
 
-use App\Models\Bebida;
-
 interface BebidaInterface
 {
     /**

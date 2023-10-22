@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\CoberturasRepository;
 
-use CoberturasInterface;
-use RepoQueries;
+use App\Repositories\CoberturasRepository\CoberturasInterface;
+use App\Repositories\RepoQueries;
 
 class CoberturasRepository extends RepoQueries implements CoberturasInterface
 {

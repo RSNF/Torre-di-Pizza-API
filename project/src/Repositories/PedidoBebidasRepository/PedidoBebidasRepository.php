@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\PedidoBebidasRepository;
 
-use PedidoBebidasInterface;
-use RepoQueries;
+use App\Repositories\PedidoBebidasRepository\PedidoBebidasInterface;
+use App\Repositories\RepoQueries;
 
 class PedidoBebidasRepository extends RepoQueries implements PedidoBebidasInterface
 {
